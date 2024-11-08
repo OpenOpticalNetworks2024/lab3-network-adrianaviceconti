@@ -119,9 +119,6 @@ class Line(object):
         return 1e-9 * signal_power * self._length
 
     def propagate(self, signal_information):
-        latency = self.latency_generation()
-        print(f"Propagating through line {self.label} with latency {latency:.5e} s")
-
         signal_information.update_latency(self.latency_generation())
         signal_information.update_noise_power(self.noise_generation(signal_information.signal_power))
         if signal_information.path:
