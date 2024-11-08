@@ -1,5 +1,4 @@
 import json
-import sys
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -8,8 +7,6 @@ from core.elements import Network, Signal_information
 from core.science_utils import snr_db
 
 # Exercise Lab3: Network
-
-sys.path.append(str(Path(__file__).resolve().parent.parent / 'core'))
 
 ROOT = Path(__file__).parent.parent
 INPUT_FOLDER = ROOT / 'resources'
